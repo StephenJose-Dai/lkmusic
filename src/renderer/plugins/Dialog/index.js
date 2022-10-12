@@ -56,10 +56,3 @@ dialog.confirm = options => dialog(
     : { ...options, showCancel: true },
 )
 
-const dialogPlugin = {
-  install(Vue, options) {
-    Vue.config.globalProperties.$dialog = dialog
-  },
-}
-
-export default dialogPlugin

@@ -1,5 +1,5 @@
 {
-  "name": "lkmusic",
+  "name": "lxmusic",
   "version": "1.22.3",
   "description": "一个免费的音乐下载工具",
   "main": "./dist/main.js",

@@ -1,7 +1,7 @@
 <template>
 <div :class="[$style.aside, { [$style.fullscreen]: isFullscreen }]">
   <ControlBtns v-if="setting.controlBtnPosition == 'left'" />
-  <div :class="$style.logo" v-else>L X</div>
+  <div :class="$style.logo" v-else>S T</div>
   <NavBar />
 </div>
 </template>
