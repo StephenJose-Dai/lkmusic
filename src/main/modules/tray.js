@@ -62,7 +62,7 @@ const createTray = () => {
   // 托盘
   global.modules.tray = new Tray(nativeImage.createFromPath(iconPath))
 
-  global.modules.tray.setToolTip('洛克音乐')
+  global.modules.tray.setToolTip('洛雪音乐助手')
   createMenu(global.modules.tray)
   global.modules.tray.setIgnoreDoubleClickEvents(true)
   global.modules.tray.on('click', () => {

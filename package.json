@@ -1,9 +1,9 @@
 {
-  "name": "lkmusic",
+  "name": "lx-music-desktop",
   "version": "1.22.3",
-  "description": "一个免费的音乐下载工具",
+  "description": "一个免费的音乐查找助手",
   "main": "./dist/main.js",
-  "productName": "lkmusic",
+  "productName": "lx-music-desktop",
   "scripts": {
     "pack": "node build-config/pack.js && npm run pack:win:setup:x64",
     "pack:win": "node build-config/pack.js && npm run pack:win:setup:x64 && npm run pack:win:setup:x86 && npm run pack:win:setup:arm64 && npm run pack:win:setup:x86_64 && npm run pack:win:7z",
@@ -79,9 +79,9 @@
   "build": {
     "appId": "cn.toside.music.desktop",
     "protocols": {
-      "name": "lk-music-protocol",
+      "name": "lx-music-protocol",
       "schemes": [
-        "lkmusic"
+        "lxmusic"
       ]
     },
     "directories": {
@@ -106,8 +106,8 @@
       "icon": "./resources/icons/icon.icns",
       "category": "public.app-category.music",
       "extendInfo": {
-        "CFBundleName": "lkmusic",
-        "CFBundleDisplayName": "LK Music"
+        "CFBundleName": "lx-music-desktop",
+        "CFBundleDisplayName": "LX Music"
       }
     },
     "linux": {
@@ -116,7 +116,7 @@
       "icon": "./resources/icons",
       "category": "Utility;AudioVideo;Audio;Player;Music;",
       "desktop": {
-        "Name[zh_CN]": "洛克音乐"
+        "Name[zh_CN]": "洛雪音乐助手"
       }
     },
     "nsis": {
@@ -125,7 +125,7 @@
       "allowToChangeInstallationDirectory": true,
       "differentialPackage": true,
       "license": "./licenses/license.rtf",
-      "shortcutName": "LK Music"
+      "shortcutName": "LX Music"
     },
     "dmg": {
       "window": {
@@ -136,7 +136,7 @@
         {
           "x": 106,
           "y": 252,
-          "name": "LK Music"
+          "name": "LX Music"
         },
         {
           "x": 490,
@@ -145,7 +145,7 @@
           "path": "/Applications"
         }
       ],
-      "title": "洛克音乐 v${version}"
+      "title": "洛雪音乐助手 v${version}"
     },
     "appImage": {
       "license": "./licenses/license_zh.txt",
@@ -155,7 +155,7 @@
       {
         "provider": "github",
         "owner": "lyswhut",
-        "repo": "lkmusic"
+        "repo": "lx-music-desktop"
       }
     ]
   },
@@ -169,8 +169,8 @@
     "vuejs2"
   ],
   "author": {
-    "name": "lkyy",
-    "email": "lkyy@cc.com"
+    "name": "lyswhut",
+    "email": "lyswhut@qq.com"
   },
   "license": "Apache-2.0",
   "bugs": {

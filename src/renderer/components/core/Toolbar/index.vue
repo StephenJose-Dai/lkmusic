@@ -1,7 +1,7 @@
 <template>
 <div :class="[$style.toolbar, { [$style.fullscreen]: isFullscreen }, setting.controlBtnPosition == 'left' ? $style.controlBtnLeft : $style.controlBtnRight]">
   <SearchInput />
-  <div :class="$style.logo" v-if="setting.controlBtnPosition == 'left'">S T</div>
+  <div :class="$style.logo" v-if="setting.controlBtnPosition == 'left'">L X</div>
   <ControlBtns v-else />
 </div>
 </template>

@@ -44,13 +44,15 @@ material-modal(:show="versionInfo.showModal" @close="handleClose")
         p 发现有新版本啦，但是自动更新功能出问题了，
         p
           | 你可以去&nbsp;
-          strong.hover.underline(@click="handleOpenUrl('https://pornhub.com')" aria-label="点击打开") 软件发布页
+          strong.hover.underline(@click="handleOpenUrl('https://github.com/lyswhut/lx-music-desktop/releases')" aria-label="点击打开") 软件发布页
           | &nbsp;或&nbsp;
-          strong.hover.underline(@click="handleOpenUrl('https://pornhub.com')" aria-label="点击打开") 
+          strong.hover.underline(@click="handleOpenUrl('https://www.lanzoui.com/b0bf2cfa/')" aria-label="点击打开") 网盘
+          | (密码：
+          strong.hover(@click="handleCopy('glqw')" aria-label="点击复制") glqw
           | )&nbsp;下载新版本，
         p
-          | 国内Windows/MAC用户请使用VPN进行更新。
-          strong 网站
+          | 国内Windows/MAC用户推荐到
+          strong 网盘
           | 下载。
       base-btn(:class="$style.btn" @click.onec="handleIgnoreClick") {{ isIgnored ? '恢复当前版本的更新失败提醒' : '忽略当前版本的更新失败提醒'}}
   main(:class="$style.main" v-else-if="versionInfo.isDownloading && versionInfo.isTimeOut && !versionInfo.isUnknow")
@@ -59,13 +61,15 @@ material-modal(:show="versionInfo.showModal" @close="handleClose")
       p 你当前所在网络访问GitHub较慢，导致新版本下载超时（已经下了半个钟了😳），你仍可选择继续等，但墙裂建议手动更新版本！
       p
         | 你可以去
-        base-btn(min @click="handleOpenUrl('https://pornhub.com')" aria-label="点击打开") 软件发布页
+        base-btn(min @click="handleOpenUrl('https://github.com/lyswhut/lx-music-desktop/releases')" aria-label="点击打开") 软件发布页
         | 或
-        base-btn(min @click="handleOpenUrl('https://pornhub.com')" aria-label="点击打开") 
+        base-btn(min @click="handleOpenUrl('https://www.lanzoui.com/b0bf2cfa/')" aria-label="点击打开") 网盘
+        | (密码：
+        strong.hover(@click="handleCopy('glqw')" aria-label="点击复制") glqw
         | )下载新版本，
       p
-        | 国内Windows/MAC用户请使用VPN进行更新。
-        strong 网站
+        | 国内Windows/MAC用户推荐到
+        strong 网盘
         | 下载。
       p 当前下载进度：{{progress}}
   main(:class="$style.main" v-else-if="versionInfo.isUnknow")
@@ -75,12 +79,14 @@ material-modal(:show="versionInfo.showModal" @close="handleClose")
       div(:class="$style.current")
         h3 当前版本：{{versionInfo.version}}
         div(:class="$style.desc")
-          p 更新信息获取失败，可能是无法访问导致的，请手动检查更新！
+          p 更新信息获取失败，可能是无法访问Github导致的，请手动检查更新！
           p
             | 检查方法：打开
-            base-btn(min @click="handleOpenUrl('https://pornhub.com')" aria-label="点击打开") 软件发布页
+            base-btn(min @click="handleOpenUrl('https://github.com/lyswhut/lx-music-desktop/releases')" aria-label="点击打开") 软件发布页
             | 或
-            base-btn(min @click="handleOpenUrl('https://pornhub.com')" aria-label="点击打开") 
+            base-btn(min @click="handleOpenUrl('https://www.lanzoui.com/b0bf2cfa/')" aria-label="点击打开") 网盘
+            | (密码：
+            strong.hover(@click="handleCopy('glqw')" aria-label="点击复制") glqw
             | )查看它们的
             strong 版本号
             | 与当前版本({{versionInfo.version}})对比是否一样，
@@ -109,11 +115,13 @@ material-modal(:show="versionInfo.showModal" @close="handleClose")
           | 重新打开本弹窗。
         p
           | 手动更新可以去&nbsp;
-          strong.hover.underline(@click="handleOpenUrl('https://pornhub.com')" aria-label="点击打开") 软件发布页
+          strong.hover.underline(@click="handleOpenUrl('https://github.com/lyswhut/lx-music-desktop/releases')" aria-label="点击打开") 软件发布页
           | &nbsp;或&nbsp;
-          strong.hover.underline(@click="handleOpenUrl('https://pornhub.com')" aria-label="点击打开")
+          strong.hover.underline(@click="handleOpenUrl('https://www.lanzoui.com/b0bf2cfa/')" aria-label="点击打开") 网盘
+          | (密码：
+          strong.hover(@click="handleCopy('glqw')" aria-label="点击复制") glqw
           | )&nbsp;下载，
-        p 国内Windows/MAC用户请使用VPN进行更新。
+        p 国内Windows/MAC用户推荐到网盘下载。
         p 当前下载进度：{{progress}}
 </template>
 
