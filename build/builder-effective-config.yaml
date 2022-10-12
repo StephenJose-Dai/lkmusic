@@ -1,0 +1,61 @@
+directories:
+  output: ./build
+  buildResources: ./resources
+appId: cn.toside.music.desktop
+protocols:
+  name: lk-music-protocol
+  schemes:
+    - lkmusic
+files:
+  - filter:
+      - dist/**/*
+asar:
+  smartUnpack: false
+extraResources:
+  - filter:
+      - ./licenses
+win:
+  icon: ./resources/icons/icon.ico
+  legalTrademarks: lyswhut
+  artifactName: ${productName} v${version} ${env.ARCH} ${env.TARGET}.${ext}
+mac:
+  icon: ./resources/icons/icon.icns
+  category: public.app-category.music
+  extendInfo:
+    CFBundleName: lkmusic
+    CFBundleDisplayName: LK Music
+linux:
+  maintainer: lyswhut <lyswhut@qq.com>
+  artifactName: ${productName} v${version} ${env.ARCH}.${ext}
+  icon: ./resources/icons
+  category: Utility;AudioVideo;Audio;Player;Music;
+  desktop:
+    Name[zh_CN]: 洛克音乐
+nsis:
+  oneClick: false
+  language: '2052'
+  allowToChangeInstallationDirectory: true
+  differentialPackage: true
+  license: ./licenses/license.rtf
+  shortcutName: LK Music
+dmg:
+  window:
+    width: 600
+    height: 400
+  contents:
+    - x: 106
+      'y': 252
+      name: LK Music
+    - x: 490
+      'y': 252
+      type: link
+      path: /Applications
+  title: 洛克音乐 v${version}
+appImage:
+  license: ./licenses/license_zh.txt
+  category: Utility;AudioVideo;Audio;Player;Music;
+publish:
+  - provider: github
+    owner: lyswhut
+    repo: lkmusic
+electronVersion: 15.5.7
